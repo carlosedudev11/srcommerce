@@ -102,11 +102,12 @@ header.scrolled {
     -webkit-box-shadow: 5px 2px 29px 0px rgba(0,0,0,0.85);
     -moz-box-shadow: 5px 2px 29px 0px rgba(0,0,0,0.85);
     transition: var(--tran04s);
+    border-radius: 5px;
 }
 
 
 .header .nav-header .options-header-mob li {
-    padding: 10px;
+    padding: 20px;
     list-style: none;
     cursor: pointer;
     width: 100%;
@@ -114,9 +115,10 @@ header.scrolled {
 }
 
 .header .nav-header .options-header-mob li a {
-    padding: 10px;
+    padding: 20px 10px 0px 10px;
     height: 100%;
     width: 100%;
+    font-size: 12px;
 }
 
 .menu-buguer {
@@ -268,7 +270,7 @@ header.scrolled {
 }
 
 .card-prices {
-    margin-top: 10px;
+    margin-top: 20px;
     margin: auto;
     max-width: 300px;
     width: 200px;
@@ -276,6 +278,11 @@ header.scrolled {
     background: rgba(3, 2, 37, 0.2);
     border-radius: 10px;
     text-align: center;
+    cursor: pointer;
+}
+
+.card-prices:hover {
+    transform: scale(1.2);
 }
 
 .card-prices h1 {
@@ -357,9 +364,18 @@ footer .infors {
 
 .bi-instagram {
     color: antiquewhite;
-    border-radius: 50%;
+    border-radius: 20%;
     border: 1px solid white;
     padding: 10px;
+}
+
+.bi-instagram:hover, .go-intro:hover {
+    background: #fff;
+    color: var(--footerBackground);
+}
+
+.go-intro:hover {
+    border: none;
 }
 
 @media (max-width: 768px) {
