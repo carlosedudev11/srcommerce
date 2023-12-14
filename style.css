@@ -5,7 +5,7 @@
     --footerBackground: hsl(216, 53%, 9%);
     --testimonialsBackground: hsl(219, 30%, 18%);
     /*Accent*/
-    --CYANinsideCall-to-actionGradient: hsl(176, 68%, 64%);
+    --CYANinsideCall-to-actionGradient: #65e2d9;
     --BLUEinsideCall-to-actionGradient: hsl(198, 60%, 50%);
     --error: hsl(0, 100%, 63%);
     /*NEUTRAL*/
@@ -37,9 +37,37 @@ body {
     transition: var(--tran03s);
 }
 
+.form-background {
+    position: absolute;
+    z-index: -1;
+}
+
+.form1 {
+    top: 200px;
+    left: -200px;
+    width: 400px;
+    height: 400px;
+    background: var(--CYANinsideCall-to-actionGradient);
+    border-radius: 50%;
+}
+.form2 {
+    top: 150px;
+    right: 200px;
+    width: 400px;
+    height: 400px;
+    /* From https://css.glass */
+background: rgba(101, 226, 217, 0.53);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(13.8px);
+-webkit-backdrop-filter: blur(13.8px);
+    border-radius: 10px;
+    
+}
+
 header{
     display: flex;
-    padding: 30px 30px 0 30px;
+    padding: 30px 30px 30px 30px;
     justify-content: space-between;
     align-items: center;
     position: sticky;
@@ -200,6 +228,9 @@ header.scrolled {
     padding: 2rem;
     gap: 10rem;
     margin-top: 200px;
+    background: cyan;
+    border-radius: 10px;
+    color: var(--footerBackground);
 }
 
 .content .caracteristicas .card-features {
@@ -213,7 +244,8 @@ header.scrolled {
 }
 .content .caracteristicas .card-features:hover {
     border-radius: 10px;
-    border: 1px solid white;
+    background: var(--footerBackground);
+    color: var(--CYANinsideCall-to-actionGradient);
 }
 
 .content .caracteristicas .card-features i {
@@ -264,7 +296,7 @@ header.scrolled {
 
 .container-price-cards{
     grid-template-columns:  repeat(auto-fill, minmax(200px, 1fr));
-    padding: 2rem;
+    padding: 4rem;
     gap: 5rem;
     grid-auto-rows: minmax(100px, auto);
 }
@@ -419,6 +451,10 @@ footer .infors {
 @media(max-width: 1000px) {
     .content .about img {
         width: 300px;
+    }
+    .form1{
+        transition: var(--tran03s);
+        opacity: 0;
     }
 }
 
